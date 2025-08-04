@@ -1,0 +1,508 @@
+<style>
+#rec1083444331, #rec1083451601, #rec1083452116, #rec1083452181, #rec1083452581, 
+#rec1083452641, #rec1083454836, #rec1153834936, #rec1153859601, #rec1153866886, 
+#rec1153883161, #rec1153928841, #rec1155350001, #rec1155370961, #rec1155721361, 
+#rec1155892841, #rec1155938036, #rec1158250446, #rec1161440676, #rec1162098386 {
+   opacity: 0;
+  }
+
+#mistakes {
+   color: red;
+   margin-top: 20px;
+}
+
+.mb-2 {
+  margin-bottom: .5rem !important;
+}
+
+.ms-5 {
+  margin-left: 6.4rem !important;
+}
+
+.mt-3 {
+  margin-top: 1rem !important;
+}
+
+ input {
+  margin-right: 10px;
+  margin-left: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin-bottom: 3px;
+}
+
+.mb-3 {
+    margin-bottom: 4px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.shrift {
+    font-family: 'ProximaNova',Arial,sans-serif;
+    font-weight: lighter;
+}
+
+.btn_result_Triangle {
+  background: #265b6f;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+  width: 250px;
+  height: 58px;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 16px;
+  display: block;
+  font-family: 'ProximaNova',Arial,sans-serif;
+}
+
+.btn_result_Triangle:hover {
+    background: #4b859e;
+}
+
+ .custom-radio {
+       appearance: none;
+       width: 12px;
+       height: 12px;
+       border: 1.5px solid #265b6f;
+       background-color: #fff;
+       margin-right: 10px;
+       margin-top: 4px;
+     }
+
+     .custom-radio:checked {
+       background-color: #265b6f; 
+     }
+ .boxarea {
+    box-shadow: 0px 0px 5px #c4c4c4;
+    padding: 20px;
+    width: 100%;
+    margin-right: 30px;
+ }
+ .boxcol {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 10px;
+ }
+
+ .fonttitle {
+    font-weight: 400;
+ }
+  .under-center {
+    display: flex;
+    justify-content: center;
+ }
+ .block_result_Triangle {
+     margin-top: 70px;
+ }
+ .my-icon {
+    width: 20px;
+    height: 20px;
+    margin-bottom: -2px;
+    margin-left: 3px;
+    cursor: pointer;
+ }
+.hidden-value_sauna {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: -100;
+    font-size: 12px;
+    background: #f9f9f9;
+    padding: 6px;
+    border-radius: 5px;
+    position: absolute;
+    top: -48px;
+    left: 238px;
+    width: 340px;
+ }
+  .hidden-location {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: -100;
+    font-size: 12px;
+    background: #f9f9f9;
+    padding: 6px;
+    border-radius: 5px;
+    position: absolute;
+    top: 107px;
+    left: 90px;
+    width: 340px;
+ }
+.hidden-heating {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: -100;
+    font-size: 12px;
+    background: #f9f9f9;
+    padding: 6px;
+    border-radius: 5px;
+    position: absolute;
+    top: -41px;
+    left: 620px;
+    width: 340px;
+ }
+ .hidden-design {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: -100;
+    font-size: 12px;
+    background: #f9f9f9;
+    padding: 6px;
+    border-radius: 5px;
+    position: absolute;
+    top: 59px;
+    left: 811px;
+    width: 340px;
+ } 
+ .hidden-appearance {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: -100;
+    font-size: 12px;
+    background: #f9f9f9;
+    padding: 6px;
+    border-radius: 5px;
+    position: absolute;
+    top: -134px;
+    left: 21px;
+    width: 340px;
+ } 
+  .hidden-konvektor {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: -100;
+    font-size: 12px;
+    background: #f9f9f9;
+    padding: 6px;
+    border-radius: 5px;
+    position: absolute;
+    top: 107px;
+    left: 207px;
+    width: 340px;
+ }
+  .hidden-tank {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: -100;
+    font-size: 12px;
+    background: #f9f9f9;
+    padding: 6px;
+    border-radius: 5px;
+    position: absolute;
+    top: -25px;
+    left: 630px;
+    width: 340px;
+ } 
+  .hidden-chimney {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: -100;
+    font-size: 12px;
+    background: #f9f9f9;
+    padding: 6px;
+    border-radius: 5px;
+    position: absolute;
+    top: 109px;
+    left: 636px;
+    width: 340px;
+ } 
+ .value_sauna:hover + .hidden-value_sauna {
+    opacity: 1;
+    z-index: 100;
+ }
+ .location:hover + .hidden-location {
+    opacity: 1;
+    z-index: 100;
+ }
+ .heating:hover + .hidden-heating {
+    opacity: 1;
+    z-index: 100;
+ }
+ .design:hover + .hidden-design {
+    opacity: 1;
+    z-index: 100;
+ }
+ .appearance:hover + .hidden-appearance {
+    opacity: 1;
+    z-index: 100;
+ }
+ .konvektor:hover + .hidden-konvektor {
+    opacity: 1;
+    z-index: 100;
+ }
+  .tank:hover + .hidden-tank {
+    opacity: 1;
+    z-index: 100;
+ }
+ .chimney:hover + .hidden-chimney {
+    opacity: 1;
+    z-index: 100;
+ }
+
+    </style>
+    
+ <svg style="display: none;">
+        <symbol id="info-circle-icon" viewBox="0 0 63.1 63.1">
+            <defs>
+                <style type="text/css">
+                    <![CDATA[
+                    .fil0 {fill:#DBDBDB;fill-rule:nonzero}
+                    .fil1 {fill:#31566A;fill-rule:nonzero}
+                    ]]>
+                </style>
+            </defs>
+            <g id="Слой_x0020_1">
+                <metadata id="CorelCorpID_0Corel-Layer"/>
+                <path class="fil0" d="M0 31.55c0,-8.71 3.53,-16.6 9.24,-22.31 5.71,-5.71 13.6,-9.24 22.31,-9.24 8.71,0 16.6,3.53 22.31,9.24 5.71,5.71 9.24,13.6 9.24,22.31 0,8.71 -3.53,16.6 -9.24,22.31 -5.71,5.71 -13.6,9.24 -22.31,9.24l-31.55 0 0 -31.55z"/>
+                <g id="_2173467747904">
+                    <path class="fil1" d="M30.61 25.75l-2.9 0c-1.61,0 -2.91,1.3 -2.91,2.9 0,1.6 1.3,2.9 2.91,2.9l2.9 0 0 17.42c0,1.6 1.3,2.9 2.9,2.9 1.61,0 2.91,-1.3 2.91,-2.9l0 -17.42c0,-3.2 -2.6,-5.8 -5.81,-5.8l0 0z"/>
+                    <circle class="fil1" cx="30.61" cy="15.58" r="4.35"/>
+                </g>
+            </g>
+        </symbol>
+    </svg>
+
+   <div class="ms-5 mt-3 shrift" style="display: flex;">
+      <div style="width: 98%;">
+        
+        <div class="boxcol">
+        <div class="boxarea">
+          <div id="value_sauna" onclick="chooseDesign()">
+              <div class="mb-2 fonttitle">Укажите, пожалуйста, объем парного помещения
+                 <svg class="my-icon value_sauna">
+                    <use href="#info-circle-icon"></use>
+                  </svg>
+                  <div class="hidden-value_sauna">Что бы посчитать объем помещения, 
+                    необходимо умножить площадь на высоту потолка 
+                    (мы рекомендуем от 2,2 до 2.4 метра, чтобы удобнее работать с паром)</div>
+                 </div>
+              <div class="mb-3">
+                  <input id="a" class="custom-radio" type="radio" name="value_sauna" value="a" />
+                  <label for="a">от 8 м³ до 14 м³</label>
+              </div>
+    
+              <div class="mb-3">
+                  <input id="b" class="custom-radio" type="radio" name="value_sauna" value="b" />
+                  <label for="b">от 12 м³ до 20 м³</label>
+              </div>
+    
+              <div class="mb-3">
+                  <input id="c" class="custom-radio" type="radio" name="value_sauna" value="c" />
+                  <label for="c">от 18 м³ до 26 м³</label>
+              </div>
+            
+             <div class="mb-3">
+                  <input id="d" class="custom-radio" type="radio" name="value_sauna" value="d" />
+                  <label for="d">от 25 м³ до 40 м³</label>
+              </div>
+    
+          </div>
+  
+        <br/>
+     
+          <div id="location" onclick="chooseDesign()">
+              <div class="mb-2 fonttitle">Есть ли утепление в парной?
+                <svg class="my-icon location">
+                    <use href="#info-circle-icon"></use>
+                  </svg>
+                  <div class="hidden-location">Если стены, пол и потолок бани имеют многослойную конструкцию 
+                    с теплоизоляцией, и ветрозащитой, то ваша баня утеплена как термос</div>
+              </div>
+              <div class="mb-3">
+                  <input id="e" class="custom-radio" type="radio" name="insulation" value="e"/>
+                  <label for="e">Утепление как термос</label>
+              </div>
+    
+              <div class="mb-3">
+                  <input id="f" class="custom-radio" type="radio" name="insulation" value="f"/>
+                  <label for="f">Стены из рубленого дерева</label>
+              </div>
+           
+          </div>
+
+          </div>
+          <br/>
+    
+    <br/>
+    <div class="boxarea">
+    <div id="heating" onclick="chooseDesign()">
+              <div class="mb-2 fonttitle">Есть ли отопление в бане?
+                <svg class="my-icon heating">
+                    <use href="#info-circle-icon"></use>
+                  </svg>
+                   <div class="hidden-heating">В бане установлен дополнительный источник тепла, 
+                     который позволяет поддерживать плюсовую температуру.</div>
+              </div>
+              <div class="mb-3">
+                  <input id="g" class="custom-radio" type="radio" name="heating" value="g" />
+                  <label for="g">Да</label>
+              </div>
+    
+              <div class="mb-3">
+                  <input id="h" class="custom-radio" type="radio" name="heating" value="h" />
+                  <label for="h">Нет, промерзаемая баня</label>
+              </div>
+    
+    
+          </div>
+          <br/>
+           <br/>
+           <div id="design" onclick="chooseDesign()">
+              <div class="mb-2 fonttitle">Семейная баня или для коммерческого использования?
+                <svg class="my-icon design">
+                    <use href="#info-circle-icon"></use>
+                  </svg>
+                   <div class="hidden-design">Семейная предназначена для домашнего, периодического использования
+                    с умеренной частотой эксплуатации.
+                    <br/>Коммерческая рассчитана на постоянное, интенсивное использование 
+                    c большим количеством посетителей
+                   </div>
+              </div>
+             
+              <div class="mb-3">
+                  <input id="i" class="custom-radio" type="radio" name="design" value="i" />
+                  <label for="i">Семейная </label>
+              </div>
+            
+             <div class="mb-3">
+                  <input id="j" class="custom-radio" type="radio" name="design" value="j" />
+                  <label for="j">Коммерческая </label>
+              </div>
+    
+          </div>
+     </div>
+    </div>
+    <br/>
+    <div class="boxcol" onclick="scrollBlock()">
+    <div  class="boxarea" onclick="clearResult()">
+        <div id="appearance">
+              <div class="mb-2 fonttitle">Выбор облицовки
+                 <svg class="my-icon appearance">
+                    <use href="#info-circle-icon"></use>
+                  </svg>
+                   <div class="hidden-appearance">Сетка - кожух печи изготовлен в виде сетки из нержавеющей стали и полностью заполняется природными камнями.
+                     <br/>Комбинированная - модель с комбинированной облицовкой из нержавеющей сетки и ламелей из натурального камня.  
+                     <br/>Ламель из камня - печь полностью облицована ламелями из камня.
+                     <br/>Облицовка из камня - печь полностью облицована плитами из камня
+                    </div>
+              </div>
+             
+              <div id="setka" class="mb-3">
+                  <input id="k" class="custom-radio" type="radio" name="appearance" value="k" />
+                  <label for="k">Сетка </label>
+              </div>
+            
+             <div id="kombi" class="mb-3">
+                  <input id="l" class="custom-radio" type="radio" name="appearance" value="l" />
+                  <label for="l">Комбинированная </label>
+              </div>
+
+              <div id="lamel" class="mb-3">
+                  <input id="m" class="custom-radio" type="radio" name="appearance" value="m" />
+                  <label for="m">Ламель из камня </label>
+              </div>
+
+              <div id="kamen" class="mb-3">
+                  <input id="n" class="custom-radio" type="radio" name="appearance" value="n" />
+                  <label for="n">Облицовка из камня </label>
+              </div>
+              </div>
+             
+               <br/>
+               <br/>
+             <div id="konvektor" onclick="clearResult()">
+              <div class="mb-2 fonttitle">Планируете приобрести натрубный элемент?
+                <svg class="my-icon konvektor">
+                    <use href="#info-circle-icon"></use>
+                  </svg>
+                   <div class="hidden-konvektor">Натрубный элемент в виде сетки или облицовки чугунной трубы 
+                    служит защитой от инфракрасного излучения, а дымоход конвектор не только защищает от излучения,
+                    но и обеспечивает конвекцию воздуха в помещении.
+                    </div>
+              </div>
+             
+              <div class="mb-3">
+                  <input id="o" class="custom-radio" type="radio" name="konvektor" value="y" />
+                  <label for="o">Дымоход-конвектор </label>
+              </div>
+              
+              <div class="mb-3">
+                  <input id="p" class="custom-radio" type="radio" name="konvektor" value="o" />
+                  <label for="p">Натрубная сетка </label>
+              </div>
+
+              <div class="mb-3">
+                  <input id="v" class="custom-radio" type="radio" name="konvektor" value="p" />
+                  <label for="v">Облицовка чугунной трубы </label>
+              </div>
+            
+             <div  class="mb-3">
+                  <input id="q" class="custom-radio" type="radio" name="konvektor" value="n" />
+                  <label for="q">Нет </label>
+              </div>
+    
+          </div>
+    
+          </div>
+            
+          <br/>
+         <br/>
+         <div class="boxarea">
+          <div id="tank" onclick="clearResult()">
+              <div class="mb-2 fonttitle">Планируете подогрев воды?
+                <svg class="my-icon tank">
+                    <use href="#info-circle-icon"></use>
+                  </svg>
+                  <div class="hidden-tank">Если укажите да, то предложим вам баки для воды и теплообменники.
+                    </div>
+              </div>
+             
+              <div class="mb-3">
+                  <input id="r" class="custom-radio" type="radio" name="tank" value="y" />
+                  <label for="r">Да </label>
+              </div>
+            
+             <div  class="mb-3">
+                  <input id="s" class="custom-radio" type="radio" name="tank" value="n" />
+                  <label for="s">Нет </label>
+              </div>
+    
+          </div>
+          <br/>
+         <br/>
+          <div id="chimney" onclick="clearResult()">
+              <div class="mb-2 fonttitle">Планируете покупку дымохода?
+                <svg class="my-icon chimney">
+                    <use href="#info-circle-icon"></use>
+                  </svg>
+                  <div class="hidden-chimney">Для банных печей Prometall мы рекомендуем устанавливать дымоходы CRAFT из аустенитной нержавеющей стали.
+                    </div>
+              </div>
+             
+              <div class="mb-3">
+                  <input id="t" class="custom-radio" type="radio" name="chimney" value="y" />
+                  <label for="t">Да </label>
+              </div>
+            
+             <div  class="mb-3">
+                  <input id="u" class="custom-radio" type="radio" name="chimney" value="n" />
+                  <label for="u">Нет </label>
+              </div>
+    
+          </div>
+          </div>
+    </div>
+    <br/>
+    <br/>
+          <div class="under-center">
+             <div class="block_result_Triangle">
+                 <button id="btn_result_Triangl" class="btn_result_Triangle mb-3" onclick="Triangle()">ПОДОБРАТЬ БАННУЮ ПЕЧЬ</button>
+              </div>
+          </div>
+          <div class="under-center" id="mistakes"></div>
+          <br/>
+      </div>
+
+    </div>
