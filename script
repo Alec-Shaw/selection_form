@@ -1,0 +1,628 @@
+<script>
+   
+   document.addEventListener("DOMContentLoaded", function () {
+       
+    setTimeout(function(){
+  clearResult();
+  document.getElementById('rec1083444331').style.opacity = '1';
+  document.getElementById('rec1083451601').style.opacity = '1';
+  document.getElementById('rec1083452116').style.opacity = '1';
+  document.getElementById('rec1083452181').style.opacity = '1';
+  document.getElementById('rec1083452581').style.opacity = '1';
+  document.getElementById('rec1083452641').style.opacity = '1';
+  document.getElementById('rec1083454836').style.opacity = '1';
+  document.getElementById('rec1153834936').style.opacity = '1';
+  document.getElementById('rec1153859601').style.opacity = '1';
+  document.getElementById('rec1153866886').style.opacity = '1';
+  document.getElementById('rec1153883161').style.opacity = '1';
+  document.getElementById('rec1153928841').style.opacity = '1';
+  document.getElementById('rec1155350001').style.opacity = '1';
+  document.getElementById('rec1155370961').style.opacity = '1';
+  document.getElementById('rec1155721361').style.opacity = '1';     
+  document.getElementById('rec1155892841').style.opacity = '1';
+  document.getElementById('rec1155938036').style.opacity = '1';
+  document.getElementById('rec1158250446').style.opacity = '1';
+  document.getElementById('rec1161440676').style.opacity = '1';
+  document.getElementById('rec1162098386').style.opacity = '1';
+      }, 3000);
+
+
+
+document.getElementById("mistakes").innerHTML = "";
+
+let insulation = document.querySelectorAll('input[name="insulation"]');
+for (const f of insulation) {
+    f.checked = false;
+}
+
+let value_sauna = document.querySelectorAll('input[name="value_sauna"]');
+for (const f of value_sauna) {
+    f.checked = false;
+}
+
+let heating = document.querySelectorAll('input[name="heating"]');
+for (const f of heating) {
+    f.checked = false;
+}
+
+let design = document.querySelectorAll('input[name="design"]');
+for (const f of design) {
+    f.checked = false;
+}
+
+let appearance = document.querySelectorAll('input[name="appearance"]');
+for (const f of appearance) {
+    f.checked = false;
+}
+
+let tank = document.querySelectorAll('input[name="tank"]');
+for (const f of tank) {
+    f.checked = false;
+}
+
+let chimney = document.querySelectorAll('input[name="chimney"]');
+for (const f of chimney) {
+    f.checked = false;
+}
+
+let konvektor = document.querySelectorAll('input[name="konvektor"]');
+for (const f of konvektor) {
+    f.checked = false;
+}
+
+});
+
+  let checkValue = () => {
+      let value_sauna = document.querySelectorAll('input[name="value_sauna"]');
+      for (const f of value_sauna) {
+         if (f.checked) {
+            return f.value;
+         }
+      }
+   }
+
+    let checkInsulation = () => {
+      let valueExitF = document.querySelectorAll('input[name="insulation"]');
+      for (const f of valueExitF) {
+         if (f.checked) {
+            return f.value;
+         }
+      }
+   }
+
+let checkHeating = () => {
+    let heating = document.querySelectorAll('input[name="heating"]');
+    for (const f of heating) {
+       if (f.checked) {
+          return f.value;
+         }
+      }
+   }
+   
+   let checkDesign = () => {
+    let nameLocatopn = document.querySelectorAll('input[name="design"]');
+    for (const f of nameLocatopn) {
+       if (f.checked) {
+            return f.value;
+         }
+      }
+   }
+   
+ let checkAppearance = () => {
+    let appearance = document.querySelectorAll('input[name="appearance"]');
+    for (const f of appearance) {
+       if (f.checked) {
+            return f.value;
+         }
+      }
+   }
+
+ let checkTank = () => {
+    let tank = document.querySelectorAll('input[name="tank"]');
+    for (const f of tank) {
+       if (f.checked) {
+            return f.value;
+         }
+      }
+   }
+
+   let checkChimney = () => {
+    let chimney = document.querySelectorAll('input[name="chimney"]');
+    for (const f of chimney) {
+       if (f.checked) {
+            return f.value;
+         }
+      }
+   }
+
+   let checkKonvektor = () => {
+    let konvektor = document.querySelectorAll('input[name="konvektor"]');
+    for (const f of konvektor) {
+       if (f.checked) {
+            return f.value;
+         }
+      }
+   }
+
+ let clearResult = () => {
+   document.getElementById('rec1083444331').style.display = 'none';
+   document.getElementById('rec1083451601').style.display = 'none';
+   document.getElementById('rec1083452116').style.display = 'none';
+   document.getElementById('rec1083452181').style.display = 'none';
+   document.getElementById('rec1083452581').style.display = 'none';
+   document.getElementById('rec1083452641').style.display = 'none';
+   document.getElementById('rec1083454836').style.display = 'none';
+   document.getElementById('rec1153834936').style.display = 'none';
+   document.getElementById('rec1153859601').style.display = 'none';
+   document.getElementById('rec1153866886').style.display = 'none';
+   document.getElementById('rec1153883161').style.display = 'none';
+   document.getElementById('rec1153928841').style.display = 'none';
+   document.getElementById('rec1155350001').style.display = 'none';
+   document.getElementById('rec1155370961').style.display = 'none';
+   document.getElementById('rec1155721361').style.display = 'none';
+   document.getElementById('rec1155892841').style.display = 'none';
+   document.getElementById('rec1155938036').style.display = 'none';
+   document.getElementById('rec1158250446').style.display = 'none';
+   document.getElementById('rec1161440676').style.display = 'none';
+   document.getElementById('rec1162098386').style.display = 'none';
+}
+  
+
+//Функция отображения исполнения (сетка, комби, облицовка, ламель)
+function chooseDesign() { 
+
+    clearResult();
+    
+    //Сбрасывание радиокнопки
+    let appearance = document.querySelectorAll('input[name="appearance"]');
+      for (const f of appearance) {
+      f.checked = false;
+    }
+
+    // Кэшируем ссылки на DOM-элементы, чтобы не искать их повторно
+    const elements = {
+        setka: document.getElementById('setka'),
+        kombi: document.getElementById('kombi'),
+        lamel: document.getElementById('lamel'),
+        kamen: document.getElementById('kamen')
+    };
+
+    // Получаем текущие значения из функций
+    const value = checkValue();
+    const insulation = checkInsulation();
+    const heating = checkHeating();
+    const design = checkDesign();
+
+    let res = value + insulation + heating + design;
+
+     /**
+     * Устанавливаем стиль 'display' для всех элементов.
+     * @param {string} displayStyle - Значение 'display' ('block' или 'none').
+     */
+    const setAllDisplay = (displayStyle) => {
+        for (const key in elements) {
+            if (elements.hasOwnProperty(key)) {
+                elements[key].style.display = displayStyle;
+            }
+        }
+    };
+
+    /**
+     * Скрыть все элементы.
+     */
+    const hideAllDesignElements = () => {
+        setAllDisplay('none');
+    };
+
+    /**
+     * Показываеv определенные элементы дизайна, скрывая остальные.
+     * @param {string[]} elementsToShow - Массив ключей элементов, которые нужно показать.
+     */
+    const showDesignElements = (elementsToShow) => {
+        hideAllDesignElements();
+        elementsToShow.forEach(key => {
+            if (elements[key]) {
+                elements[key].style.display = 'flex';
+            }
+        });
+    };
+
+     // Определяем правила отображения для каждой комбинации
+    const displayRules = {
+        // Атмосфера V 
+        'V': {
+            conditions: [
+                (value === "d" && insulation && heating && design),
+                (res === "cfgj" || res === "cfhi" || res === "cfhj"),
+                (res === "aegi" || res === "aegj") 
+            ],
+            elements: ['setka']
+        },
+        // Атмосфера M 
+
+        'M': {
+            conditions: [
+                (res === "aegi" || res === "aegj")
+            ],
+            elements: ['setka'] 
+        },
+        // Атмосфера L
+        'L': {
+            conditions: [
+                (res === "begi")
+            ],
+            elements: ['setka', 'kombi', 'lamel', 'kamen']
+        },
+        // Атмосфера XL
+        'XL': {
+            conditions: [
+                (res === "cegi")
+            ],
+            elements: ['setka', 'lamel', 'kamen']
+        },
+        // Атмосфера M или L
+        'M_or_L': {
+            conditions: [
+                (res === "afgi" || res === "aehi" || res === "aehj")
+            ],
+            elements: ['setka', 'kombi', 'lamel', 'kamen']
+        },
+        // Атмосфера L или XL
+        'L_or_XL': {
+            conditions: [
+                (res === "afhi" || res === "afhj" || res === "bfgi" || res === "behi" || res === "begj")
+            ],
+            elements: ['setka', 'kombi', 'lamel', 'kamen']
+        },
+         // Атмосфера XL или V
+        'XL_or_V': {
+            conditions: [
+                (res === "cfgi" || res === "cehi" || res === "cegj" || res === "bfgj" || res === "bfhi" || res === "bfhj")
+            ],
+            elements: ['setka', 'lamel', 'kamen']
+        }
+    };
+
+   // hideAllDesignElements();
+
+    // Проходим по правилам и применяем их
+    for (const atmosphereType in displayRules) {
+        if (displayRules.hasOwnProperty(atmosphereType)) {
+            const rule = displayRules[atmosphereType];
+            // Проверяем каждое условие в правиле
+            const isConditionMet = rule.conditions.some(condition => condition);
+
+            if (isConditionMet) {
+                showDesignElements(rule.elements);
+                
+            }
+        }
+    }
+}
+
+let scrollBlock = () => {
+        const targetBlock = document.getElementById('rec1163581171');
+        const clickBtn = document.getElementById('btn_result_Triangl');
+        
+        clickBtn.addEventListener('click', function(){
+            
+            const rect = targetBlock.getBoundingClientRect();
+            // Получаем текущую позицию прокрутки документа
+            const currentScrollPosition = window.scrollY || window.pageYOffset;
+
+            // Рассчитываем целевую позицию прокрутки:
+            // Текущий скролл + расстояние от верха вьюпорта до верха блока + высота блока
+            // Это будет координата в документе, где заканчивается ваш блок
+            const targetScrollPosition = currentScrollPosition + rect.top + rect.height;
+             window.scrollTo({
+                top: targetScrollPosition,
+                behavior: 'smooth'
+            });
+            if (document.getElementById('mistakes').innerHTML != "") {
+               targetBlock.scrollIntoView({
+                behavior: 'smooth', 
+                block: 'end'        
+            });
+           }
+        })
+    }
+    
+ 
+    
+//Подсветка красным неотмеченных пунктов
+function checkColor() {
+    // Кэшируем ссылки на DOM-элементы
+    const elements = {
+        value: document.getElementById('value_sauna'),
+        insulation: document.getElementById('location'),
+        heating: document.getElementById('heating'),
+        design: document.getElementById('design'),
+        appearance: document.getElementById('appearance'),
+        tank: document.getElementById('tank'),
+        chimney: document.getElementById('chimney'),
+        konvektor: document.getElementById('konvektor')
+    };
+
+    /**
+     * Сбрасывает цвет всех элементов на исходный (или пустую строку).
+     */
+    const resetAllColors = () => {
+        for (const key in elements) {
+            if (elements.hasOwnProperty(key) && elements[key]) {
+                elements[key].style.color = ''; // Сбрасываем цвет
+            }
+        }
+    };
+
+    // Сбрасываем цвета всех блоков перед началом проверки
+    resetAllColors();
+
+    // Определяем правила отображения для каждой комбинации
+    // Важно: в 'elements' теперь указаны ключи из объекта 'elements'
+    const colorRules = {
+        'Value': {
+            condition: (checkValue() === undefined),
+            elementKey: 'value'
+        },
+        'Insulation': {
+            condition: (checkInsulation() === undefined),
+            elementKey: 'insulation'
+        },
+        'Heating': {
+            condition: (checkHeating() === undefined),
+            elementKey: 'heating'
+        },
+        'Design': {
+            condition: (checkDesign() === undefined),
+            elementKey: 'design'
+        },
+        'Appearance': {
+            condition: (checkAppearance() === undefined),
+            elementKey: 'appearance'
+        },
+        'Tank': {
+            condition: (checkTank() === undefined),
+            elementKey: 'tank'
+        },
+        'Chimney': {
+            condition: (checkChimney() === undefined),
+            elementKey: 'chimney'
+        },
+         'Konvektor': {
+            condition: (checkKonvektor() === undefined),
+            elementKey: 'konvektor'
+        }
+    };
+
+    let conditionsMetCount = 0;
+    const activatedElements = [];
+
+    // Проходим по правилам и проверяем условия
+    for (const ruleName in colorRules) {
+        if (colorRules.hasOwnProperty(ruleName)) {
+            const rule = colorRules[ruleName];
+            if (rule.condition) {
+                conditionsMetCount++;
+                activatedElements.push(rule.elementKey);
+            }
+        }
+    }
+
+    const totalConditions = Object.keys(colorRules).length;
+
+    if (conditionsMetCount === totalConditions) {
+        // Если все условия сработали, подсвечиваем все блоки красным
+        for (const key in elements) {
+            if (elements.hasOwnProperty(key) && elements[key]) {
+                elements[key].style.color = 'red';
+            }
+        }
+    } else {
+        // Иначе, если сработало одно или несколько (но не все), подсвечиваем только их
+        activatedElements.forEach(key => {
+            if (elements[key]) {
+                elements[key].style.color = 'red';
+            }
+        });
+    }
+}
+
+   function Triangle() {
+    
+    checkColor();
+
+let mistakes = document.getElementById('mistakes');
+
+let clearMistakes = () => {
+   let mistakes = document.getElementById('mistakes');
+   mistakes.innerHTML = "";
+  }
+
+    /**
+     * Проверяем, что все необходимые значения определены.
+     * Возвращает true, если все значения присутствуют, иначе false.
+     */
+const areAllInputsDefined = () => {
+        return (
+            typeof checkValue() !== 'undefined' &&
+            typeof checkInsulation() !== 'undefined' &&
+            typeof checkHeating() !== 'undefined' &&
+            typeof checkDesign() !== 'undefined' &&
+            typeof checkAppearance() !== 'undefined' &&
+            typeof checkTank() !== 'undefined' &&
+            typeof checkChimney() !== 'undefined' &&
+            typeof checkKonvektor() !== 'undefined'
+        );
+    };
+ 
+    
+     //Отображаем сообщение об ошибке, если не все пункты отмечены.
+    const handleMistakes = () => {
+        if (!areAllInputsDefined()) {
+            mistakes.innerHTML = "Необходимо отметить все пункты!";
+            return true; // Возвращаем true, если есть ошибки
+        }
+        clearMistakes();
+         scrollBlock();
+        return false; // Возвращаем false, если ошибок нет
+    }   
+    
+
+    // Вызываем проверку ошибок в начале
+    if (handleMistakes()) {
+        return; // Прекращаем выполнение функции, если есть ошибки
+    }
+
+let result = checkValue() + checkInsulation() + checkHeating() + checkDesign() + checkAppearance();
+let resultOblicovka = checkAppearance();
+
+
+// Атмосфера V
+if ((checkValue() === "d") && checkInsulation() && checkHeating() && checkDesign() && checkAppearance()) {
+   clearMistakes();
+   clearResult();
+   document.getElementById('rec1083444331').style.display = 'block';
+   document.getElementById('rec1155721361').style.display = 'block'; 
+}
+
+if ((result === "cfgjk") || (result === "cfhik") || (result === "cfhjk")) {
+   clearMistakes();
+   clearResult();
+   document.getElementById('rec1083444331').style.display = 'block';
+   document.getElementById('rec1155721361').style.display = 'block'; 
+}
+
+// Атмосфера M
+if (result === "aegik" || result === "aegjk") {
+   clearMistakes();
+   clearResult();
+   document.getElementById('rec1083451601').style.display = 'block';
+   document.getElementById('rec1155721361').style.display = 'block'; 
+}
+
+// Атмосфера L сетка 
+if (result === "begik") {
+   clearMistakes();
+   clearResult();
+   document.getElementById('rec1083452116').style.display = 'block';
+   document.getElementById('rec1155721361').style.display = 'block'; 
+}
+
+// Атмосфера L комби 
+if (result === "begil" || result === "afgil" || result === "aehil" || result === "aehjl" || result === "afhil" || result === "afhjl" || result === "bfgil" || result === "behil" || result === "begjl") {
+   clearMistakes();
+   clearResult();
+   document.getElementById('rec1083452641').style.display = 'block';
+   document.getElementById('rec1155721361').style.display = 'block'; 
+}
+
+// Атмосфера L ламели 
+if (result === "begim" || result === "afgim" || result === "aehim" || result === "aehjm") {
+   clearMistakes();
+   clearResult();
+   document.getElementById('rec1083452581').style.display = 'block';
+   document.getElementById('rec1155721361').style.display = 'block'; 
+}
+
+// Атмосфера L облицовка 
+if (result === "begin" || result === "afgin" || result === "aehin" || result === "aehjn") {
+   clearMistakes();
+   clearResult();
+   document.getElementById('rec1083452181').style.display = 'block';
+   document.getElementById('rec1155721361').style.display = 'block'; 
+}
+
+// Атмосфера XL сетка
+if (result === "cegik" || result === "cfgik" || result === "cehik" || result === "cegjk" || result === "bfgjk" || result === "bfhik" || result === "bfhjk") {
+   clearMistakes();
+   clearResult();
+   document.getElementById('rec1153928841').style.display = 'block';
+   document.getElementById('rec1155721361').style.display = 'block'; 
+}
+
+// Атмосфера XL ламели
+if (result === "cegim" || result === "cfgim" || result === "cehim" || result === "cegjm" || result === "bfgjm" || result === "bfhim" || result === "bfhjm") {
+   clearMistakes();
+   clearResult();
+   document.getElementById('rec1155350001').style.display = 'block';
+   document.getElementById('rec1155721361').style.display = 'block'; 
+}
+
+// Атмосфера XL облицовка
+if (result === "cegin" || result === "cfgin" || result === "cehin" || result === "cegjn" || result === "bfgjn" || result === "bfhin" || result === "bfhjn") {
+   clearMistakes();
+   clearResult();
+   document.getElementById('rec1155370961').style.display = 'block';
+   document.getElementById('rec1155721361').style.display = 'block'; 
+}
+
+// Атмосфера M или L сетка
+if ((result === "afgik") || (result === "aehik") || (result === "aehjk")) {
+   clearMistakes();
+   clearResult();
+   document.getElementById('rec1083454836').style.display = 'block';
+   document.getElementById('rec1155721361').style.display = 'block'; 
+}
+
+// Атмосфера L или XL сетка
+if ((result === "afhik") || (result === "afhjk") || (result === "bfgik") || (result === "behik") || (result === "begjk")) {
+   clearMistakes();
+   clearResult();
+   document.getElementById('rec1153834936').style.display = 'block';
+   document.getElementById('rec1155721361').style.display = 'block'; 
+}
+
+// Атмосфера L или XL ламели
+if ((result === "afhim") || (result === "afhjm") || (result === "bfgim") || (result === "behim") || (result === "begjm")) {
+   clearMistakes();
+   clearResult();
+   document.getElementById('rec1153859601').style.display = 'block';
+   document.getElementById('rec1155721361').style.display = 'block'; 
+}
+
+// Атмосфера L или XL облицовка
+if ((result === "afhin") || (result === "afhjn") || (result === "bfgin") || (result === "behin") || (result === "begjn")) {
+   clearMistakes();
+   clearResult();
+   document.getElementById('rec1153866886').style.display = 'block';
+   document.getElementById('rec1155721361').style.display = 'block'; 
+}
+
+// Атмосфера XL или V сетка
+if ((result === "cfgik") || (result === "cehik") || (result === "cegjk") || (result === "bfgjk") || (result === "bfhik") || (result === "bfhjk")) {
+   clearMistakes();
+   clearResult();
+   document.getElementById('rec1153883161').style.display = 'block';
+   document.getElementById('rec1155721361').style.display = 'block'; 
+}
+
+//Бак для воды
+if (checkTank() === "y") {
+    clearMistakes();
+    document.getElementById('rec1155892841').style.display = 'block';
+} else document.getElementById('rec1155892841').style.display = 'none';
+
+//Дымоходы
+if (checkChimney() === "y") {
+    clearMistakes();
+    document.getElementById('rec1155938036').style.display = 'block';
+} else document.getElementById('rec1155938036').style.display = 'none';
+
+//Конвектор
+if (checkKonvektor() === "y") {
+    clearMistakes();
+    document.getElementById('rec1158250446').style.display = 'block';
+} 
+
+if (checkKonvektor() === "o") {
+    clearMistakes();
+    document.getElementById('rec1161440676').style.display = 'block';
+}
+
+if (checkKonvektor() === "p") {
+    clearMistakes();
+    document.getElementById('rec1162098386').style.display = 'block';
+}
+
+}
+</script>
